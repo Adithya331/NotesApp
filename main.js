@@ -11,6 +11,12 @@ function showAllNotes(){
 }
 
 addnotes.addEventListener('click', function(){
+
+  if(document.querySelector('.textInput').value == '' || document.querySelector('.tittle_input').value==''){
+    alert('please fill the required fields')
+  }
+
+  else{
   var uniqueID = 'note'+Math.floor(Math.random()*1000)
   let note ={
     content:  document.querySelector('.textInput').value,
@@ -19,6 +25,7 @@ addnotes.addEventListener('click', function(){
   }
   addNoteToLocalStorage(note)
   renderNotes(note)
+}
 })
 
 function addNoteToLocalStorage(note){
