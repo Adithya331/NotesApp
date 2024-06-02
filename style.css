@@ -126,3 +126,11 @@ body{
   /* color: red; */
   
 }
+
+@media (max-width: 400px){
+  .notes{
+    
+    grid-template-columns: 1fr ;
+  }
+
+}
